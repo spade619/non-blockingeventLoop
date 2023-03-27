@@ -1,0 +1,74 @@
+body{
+  text-align: center;
+}
+
+#firstSection{
+    
+    height: 100px;
+}
+
+#secondSection{
+  height: 1000px;
+ 
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#workerContainer{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+#workersHolder{
+  background: black;
+  display: flex;
+  height: 450px;
+  width: 450px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.workersTesting{
+  margin: 10px;
+  height: 400px;
+  width: 400px;
+  background: green;
+}
+
+
+#buttonClicker button{
+
+  margin: 20px;
+   
+    width: 80px;
+    height: 30px;
+  
+}
+
+#buttonClicker button:hover{
+  color: blueviolet;
+  cursor: pointer;
+}
+
+#startButton{
+
+ 
+  margin-top: 20px;
+  width: 300px;
+  height: 40px;
+  margin-left: 70px;
+  border-radius: 15px;
+  background: blue;
+}
+
+#startButton:hover{
+ background: none;
+    cursor: pointer;
+}
