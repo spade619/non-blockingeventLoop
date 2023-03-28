@@ -18,58 +18,60 @@ app.get('/', (req, res) => {
   });
 
 
-app.get('/api/red', (req, res) => {
-    for (let i =0; i <= 5000; i++){
-        // setDisplayNum(i)
-        console.log(i)
-        if(i==5000){
-            break;
-            // res.send('hello testing :)')
+app.get('/api/red', async (req, res) => {
+   
+        for (let i =0; i <= 10000; i++){
+           
+            console.log(i)
+            if(i==10000){
+                break;
+                // res.send('hello testing :)')
+            }
         }
-    }
-    res.send('red')
+    
+    await res.send('red')
     
    
 })
 
-app.get('/api/blue', (req, res) => {
-    for (let i =0; i <= 5000; i++){
+app.get('/api/blue', async (req, res) => {
+    for (let i =0; i <= 10000; i++){
         // setDisplayNum(i)
         console.log(i)
-        if(i==5000){
+        if(i==10000){
             break;
             // res.send('hello testing :)')
         }
     }
-    res.send('blue')
+   await res.send('blue')
     
    
 })
 
-app.get('/api/green', (req, res) => {
-    for (let i =0; i <= 5000; i++){
+app.get('/api/green', async (req, res) => {
+    for (let i =0; i <= 10000; i++){
         // setDisplayNum(i)
         console.log(i)
-        if(i==5000){
+        if(i==10000){
             break;
             // res.send('hello testing :)')
         }
     }
-    res.send('green')
+    await res.send('green')
     
    
 })
 
-app.get('/api/pink', (req, res) => {
-    for (let i =0; i <= 5000; i++){
+app.get('/api/pink', async (req, res) => {
+    for (let i =0; i <= 10000; i++){
         // setDisplayNum(i)
         console.log(i)
-        if(i==5000){
+        if(i==10000){
             break;
             // res.send('hello testing :)')
         }
     }
-    res.send('pink')
+   await res.send('pink')
     
    
 })
