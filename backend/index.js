@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const {Worker} = require('worker_threads')
 
 app.use(express.json())
 
@@ -19,60 +20,37 @@ app.get('/', (req, res) => {
 
 
 app.get('/api/red', async (req, res) => {
-   
-        for (let i =0; i <= 10000; i++){
-           
-            console.log(i)
-            if(i==10000){
-                break;
-                // res.send('hello testing :)')
-            }
-        }
-    
-    await res.send('red')
-    
+   const worker = new Worker('./worker1.js')
+       
+    worker.on('message', (data) => {
+        res.status(200).json({data})
+        })
    
 })
 
 app.get('/api/blue', async (req, res) => {
-    for (let i =0; i <= 10000; i++){
-        // setDisplayNum(i)
-        console.log(i)
-        if(i==10000){
-            break;
-            // res.send('hello testing :)')
-        }
-    }
-   await res.send('blue')
-    
+    const worker = new Worker('./worker2.js')
+       
+    worker.on('message', (data) => {
+        res.status(200).json({data})
+        })
    
 })
 
 app.get('/api/green', async (req, res) => {
-    for (let i =0; i <= 10000; i++){
-        // setDisplayNum(i)
-        console.log(i)
-        if(i==10000){
-            break;
-            // res.send('hello testing :)')
-        }
-    }
-    await res.send('green')
-    
-   
+    const worker = new Worker('./worker3.js')
+       
+    worker.on('message', (data) => {
+        res.status(200).json({data})
+        })
 })
 
 app.get('/api/pink', async (req, res) => {
-    for (let i =0; i <= 10000; i++){
-        // setDisplayNum(i)
-        console.log(i)
-        if(i==10000){
-            break;
-            // res.send('hello testing :)')
-        }
-    }
-   await res.send('pink')
-    
+    const worker = new Worker('./worker4.js')
+       
+    worker.on('message', (data) => {
+        res.status(200).json({data})
+        })
    
 })
 
